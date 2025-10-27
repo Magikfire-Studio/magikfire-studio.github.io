@@ -1,0 +1,117 @@
+/* -----------------------------GBLLERY------------------------------- */
+
+.gallery_B {
+    /* clear: left; */
+    /* height: auto; */
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.gallery_B h2 {
+    margin-bottom: 20px;
+    padding-top: 30px;
+    display: -webkit-inline-box;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.gallery-item_B {
+    width: calc(50% - 20px);
+    height: 400px;
+    float: left;
+    margin: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    background-size: cover;
+    background-size: 130%;
+    background-position: center;
+    transition: background-size 0.5s ease-in-out;
+    border-radius: 5px;
+}
+
+#gallery-item_B-3 {
+    width: calc(33.33% - 20px);
+}
+
+#gallery-item_B-h {
+    width: calc(100% - 20px);
+}
+
+.gallery-item_B img {
+    /* position: absolute; */
+    /* top: 50%;
+    left: 50%; */
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    overflow: hidden;
+}
+
+.gallery-item_B:hover {
+    /* transform: translate(-50%, -50%) scale(1.1); */
+    /* zoom out on hover */
+    background-size: 140%;
+}
+
+.modal_B {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+    align-items: center;
+    height: 100%;
+}
+
+#modal-img_B {
+    max-width: 90%;
+    max-height: 90%;
+    margin: auto;
+    /* margin-top: 1%;
+    margin-bottom: 1%; */
+    display: block;
+    opacity: 1;
+    animation: modalPopIn 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes modalPopIn {
+    0% {
+        transform: scale(0.95);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 1350px) {
+    .gallery-item_B {
+        height: 380px;
+    }
+}
+
+@media only screen and (max-width: 920px) {
+    .gallery-item_B {
+        height: 340px;
+    }
+}
+
+@media only screen and (max-width: 740px) {
+    .gallery-item_B {
+        width: 100%;
+        height: 400px;
+        background-size: cover;
+    }
+    .gallery-item_B:hover {
+        background-size: cover + 20px;
+    }
+}
